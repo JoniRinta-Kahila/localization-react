@@ -1,4 +1,6 @@
-# npm-react-localization
+# react-localization
+
+`npm i localization-react`
 
 ## translations.ts, create translations
 ```ts
