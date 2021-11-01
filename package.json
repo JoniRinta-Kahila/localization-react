@@ -1,6 +1,6 @@
 {
   "name": "localization-react",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Easy package that allows localization with React",
   "author": "Joni Rinta-Kahila",
   "license": "Apache-2.0",
