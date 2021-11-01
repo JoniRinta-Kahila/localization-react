@@ -3,14 +3,15 @@ import { ILanguageList, LocalizationContext } from './localizationContext';
 
 export interface LocalizationContextProviderProps {
   languageList: ILanguageList,
+  defaultLanguage?: string
 };
 
-const LocalizationContextProvider: React.FC<React.PropsWithChildren<LocalizationContextProviderProps>> = ({ languageList, children }) => {
+const LocalizationContextProvider: React.FC<React.PropsWithChildren<LocalizationContextProviderProps>> = ({ languageList, defaultLanguage = "EN", children }) => {
 
   // get possibly saved language state from localStorage
   const localizationOptionsFromLocalStorage = () => {
     const storedLanguage = localStorage.getItem('selectedLanguage');
-    if (!storedLanguage) return 'EN';
+    if (!storedLanguage) return defaultLanguage;
     return storedLanguage;
   };
 
